@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8F8F8;
+  --foreground: #121212;
+  --primary: #76AE65;    /* Master's Green */
+  --secondary: #5BC1D7;  /* Master's Cyan */
+  --accent: #E5E7EB;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --font-sans: "Manrope", "Pretendard", var(--font-geist-sans), sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.font-bold-tighter {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
