@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import AnimatedSection from "./AnimatedSection";
 
 declare global {
   interface Window {
@@ -9,31 +10,31 @@ declare global {
 }
 
 export default function LocationMap() {
+  const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
+    setIsMounted(true);
+
     const timestamp = "1776011902051";
     const key = "kkvpz2k9neh";
     const scriptId = "daum-roughmap-script";
 
     const renderMap = () => {
-      // 1. 객체 존재 여부와 Lander 함수 여부 정밀 체크
-      if (typeof window !== "undefined" && window.daum?.roughmap?.Lander) {
+      //
+      if (window.daum && window.daum.roughmap && window.daum.roughmap.Lander) {
         const container = document.getElementById(
           `daumRoughmapContainer${timestamp}`,
         );
-
         if (container) {
-          // 2. 이미 지도가 그려졌다면 중복 실행 방지
-          if (container.children.length > 0) return;
-
+          container.innerHTML = "";
           new window.daum.roughmap.Lander({
             timestamp: timestamp,
             key: key,
-            mapWidth: "100%", // 혹은 컨테이너의 너비
-            mapHeight: "500", // 숫자로 입력 (문자열도 가능)
+            mapWidth: "100%",
+            mapHeight: "100%",
           }).render();
         }
       } else {
-        // 객체가 생성될 때까지 짧은 주기로 재시도
         setTimeout(renderMap, 200);
       }
     };
@@ -45,7 +46,9 @@ export default function LocationMap() {
         "https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js";
       script.charset = "UTF-8";
       script.async = true;
-      script.onload = renderMap;
+      script.onload = () => {
+        setTimeout(renderMap, 300);
+      };
       document.head.appendChild(script);
     } else {
       renderMap();
@@ -55,13 +58,24 @@ export default function LocationMap() {
   return (
     <section id="map" className="py-20 bg-slate-50">
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* 부모 div에 확실한 높이(h-[500px])를 부여하세요 */}
-        <div className="w-full h-[500px] rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white">
-          <div
-            id="daumRoughmapContainer1776011902051"
-            className="root_daum_roughmap root_daum_roughmap_landing"
-            style={{ width: "100%", height: "100%" }} // CSS 우선순위 확보
-          />
+        <AnimatedSection className="mb-12">
+          <span className="text-[13px] font-semibold tracking-[0.15em] uppercase text-[#57C1D8] mb-3 block">
+            Location
+          </span>
+          <h2 className="text-[2rem] sm:text-[2.5rem] font-bold text-slate-900 tracking-[-0.02em] leading-tight">
+            오시는 길
+          </h2>
+        </AnimatedSection>
+
+        <div className="relative w-full h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-white">
+          {!isMounted ? (
+            <div className="w-full h-full bg-slate-200 animate-pulse" />
+          ) : (
+            <div
+              id="daumRoughmapContainer1776011902051"
+              className="root_daum_roughmap root_daum_roughmap_landing w-full h-full"
+            />
+          )}
         </div>
       </div>
     </section>
