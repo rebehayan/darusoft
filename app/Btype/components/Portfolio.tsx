@@ -13,7 +13,7 @@ const PROJECTS = [
     scope: "홈페이지 유지관리",
     desc: "보수교육 및 출결시스템 기반 운영관리",
     tag: "운영",
-    img: "/medical-sys.png",
+    img: "/port1.jpg",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const PROJECTS = [
     scope: "통합 홈페이지",
     desc: "홈페이지 기능 개발 및 운영관리",
     tag: "개발",
-    img: "/gov-sys.png",
+    img: "/port2.svg",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const PROJECTS = [
     scope: "홈페이지 구축",
     desc: "홈페이지 신규 구축 및 운영관리",
     tag: "구축",
-    img: "/gov-sys.png",
+    img: "/port2.svg",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const PROJECTS = [
     scope: "대표 누리집",
     desc: "기능개선 및 운영관리",
     tag: "개선",
-    img: "/gov-sys.png",
+    img: "/port2.svg",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const PROJECTS = [
     scope: "대표홈페이지 구축",
     desc: "국문/영문 홈페이지 구축 및 운영",
     tag: "구축",
-    img: "/gov-sys.png",
+    img: "/port2.svg",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const PROJECTS = [
     scope: "홈페이지 유지관리",
     desc: "홈페이지 운영관리",
     tag: "운영",
-    img: "/edu-sys.png",
+    img: "/port2.svg",
   },
   {
     id: 7,
@@ -61,7 +61,7 @@ const PROJECTS = [
     scope: "대표홈페이지 구축",
     desc: "홈페이지 구축 및 운영관리",
     tag: "구축",
-    img: "/gov-sys.png",
+    img: "/port2.svg",
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const PROJECTS = [
     scope: "대표 홈페이지",
     desc: "대표 홈페이지 운영관리",
     tag: "운영",
-    img: "/gov-sys.png",
+    img: "/port2.svg",
   },
   {
     id: 9,
@@ -77,7 +77,7 @@ const PROJECTS = [
     scope: "홈페이지 구축",
     desc: "한국형 온라인 해양공개강좌 구축 및 운영",
     tag: "구축",
-    img: "/edu-sys.png",
+    img: "/port2.svg",
   },
 ];
 
@@ -90,7 +90,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="py-28 lg:py-36 section-white overflow-hidden"
+      className="py-40 lg:py-45 section-white overflow-hidden"
     >
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
         <AnimatedSection className="mb-16">
@@ -166,28 +166,32 @@ export default function Portfolio() {
           className="w-[calc(100%+3rem)]"
         >
           {PROJECTS.map((p) => (
-            <SwiperSlide key={p.id} className="!w-[300px] lg:!w-[380px]">
-              <div className="relative w-full aspect-[4/3] rounded-3xl bg-slate-100 border border-slate-200 overflow-hidden shadow-xl group cursor-pointer">
-                <Image
-                  src={p.img}
-                  alt={p.name}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+            <SwiperSlide key={p.id} className="!w-[300px] lg:!w-[380px] pb-2">
+              <div className="relative w-full aspect-[4/5] overflow-hidden pt-[62px] px-[32px] pb-[56px] border border-solid border-[#E5E5E5] shadow-[3px_4px_7px_rgba(0,0,0,0.08)] rounded-[16px] group cursor-pointer transition-all duration-300">
+                <div
+                  className="absolute inset-0 rounded-[16px] opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none p-[2px] bg-gradient-to-br from-[#14B8A6] via-[#0EA5E9] to-[#2563EB]"
+                  style={{
+                    WebkitMask:
+                      "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    WebkitMaskComposite: "xor",
+                    maskComposite: "exclude",
+                  }}
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent transition-all duration-300 group-hover:from-slate-900 group-hover:via-slate-900/60" />
-
-                <div className="absolute bottom-8 left-8 right-8 text-white transition-transform duration-300 group-hover:-translate-y-1">
-                  <span className="text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2 block">
+                <div className="absolute bottom-8 left-8 right-8 text-black transition-all duration-300 group-hover:-translate-y-1">
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    className="w-55 pb-5 h-auto transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="text-[12px] font-bold tracking-widest uppercase opacity-70 mb-2 block">
                     {p.tag} Project
                   </span>
-                  <h4 className="text-xl font-bold">{p.name}</h4>
-                  <p className="mt-2 text-sm text-white/60 leading-relaxed transition-colors duration-300 group-hover:text-white/90">
+                  <h4 className="text-2xl font-bold">{p.name}</h4>
+                  <p className="mt-2 text-sm text-black/60 leading-relaxed">
                     {p.desc}
                   </p>
-                  <p className="mt-1 text-xs text-white/40 transition-colors duration-300 group-hover:text-white/70">
-                    {p.scope}
-                  </p>
+                  <p className="mt-1 text-xs text-black/40">{p.scope}</p>
                 </div>
               </div>
             </SwiperSlide>

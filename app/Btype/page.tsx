@@ -4,6 +4,7 @@ import BusinessAreas from "./components/BusinessAreas";
 import Solutions from "./components/Solutions";
 import Portfolio from "./components/Portfolio";
 import Company from "./components/Company";
+import LocationMap from "./components/Map";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Solutions />
         <Portfolio />
         <Company />
+        <LocationMap />
         <Contact />
       </main>
       <Footer />

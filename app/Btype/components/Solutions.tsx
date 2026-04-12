@@ -90,7 +90,7 @@ export default function Solutions() {
     <section id="solutions" className="relative overflow-hidden">
       {/* BG Image + overlay */}
       <Image
-        src="/solutions-tech.png"
+        src="/visual1.png"
         alt=""
         fill
         className="object-cover opacity-40 grayscale"
@@ -113,13 +113,11 @@ export default function Solutions() {
             </p>
           </AnimatedSection>
 
-          <div className="space-y-20 lg:space-y-28">
+          <div className="space-y-20 lg:space-y-28 grid grid-cols-3 gap-15">
             {SOLUTIONS.map((sol, idx) => (
               <AnimatedSection key={sol.name} delay={0.1}>
-                <div
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center`}
-                >
-                  <div className={idx % 2 !== 0 ? "lg:order-2" : ""}>
+                <div className="rounded-lg border-[1px] border-white/15 p-5">
+                  <div>
                     <div className="inline-flex items-center gap-3 mb-6">
                       <div className="w-12 h-12 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center text-[#57C1D8]">
                         {sol.icon}
@@ -158,8 +156,7 @@ export default function Solutions() {
                       ))}
                     </ul>
                   </div>
-
-                  <div className={idx % 2 !== 0 ? "lg:order-1" : ""}>
+                  <div className="mt-5">
                     <motion.div
                       whileHover={{ scale: 1.02 }}
                       transition={{
@@ -167,7 +164,7 @@ export default function Solutions() {
                         stiffness: 200,
                         damping: 20,
                       }}
-                      className="relative aspect-[4/3] rounded-2xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/[0.06] overflow-hidden flex items-center justify-center  p-5 box-border"
+                      className="relative aspect-[4/3] rounded-2xl bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/[0.06] overflow-hidden flex items-center justify-center p-2 box-border"
                     >
                       <div
                         className="absolute inset-0 opacity-[0.04]"
@@ -178,18 +175,11 @@ export default function Solutions() {
                         }}
                       />
                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(87,193,216,0.06),transparent_70%)]" />
-
                       <img
                         src={sol.image}
                         alt=""
                         className="w-full h-full object-cover rounded-xl"
                       />
-                      {/* <div className="text-6xl sm:text-7xl font-bold text-white/[0.05] tracking-tight">
-                          {sol.name}
-                        </div>
-                        <div className="mt-2 text-[13px] text-slate-600 font-medium tracking-widest uppercase">
-                          {sol.tagline}
-                        </div> */}
                     </motion.div>
                   </div>
                 </div>
