@@ -78,18 +78,7 @@ export default function Contact() {
                       placeholder="홍길동"
                     />
                   </div>
-                  <div>
-                    <label className="block text-[13px] font-semibold text-slate-700 mb-2">
-                      소속 / 기관명
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-0 py-3 border-0 border-b-2 border-slate-200 bg-transparent text-[15px] text-slate-900 placeholder:text-slate-400 focus:border-[#57C1D8] transition-colors duration-300"
-                      placeholder="다루소프트"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
                   <div>
                     <label className="block text-[13px] font-semibold text-slate-700 mb-2">
                       이메일 *
@@ -101,7 +90,20 @@ export default function Contact() {
                       placeholder="example@company.com"
                     />
                   </div>
-                  <div>
+                </div>
+                {/*
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                   <div>
+                    <label className="block text-[13px] font-semibold text-slate-700 mb-2">
+                      소속 / 기관명
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full px-0 py-3 border-0 border-b-2 border-slate-200 bg-transparent text-[15px] text-slate-900 placeholder:text-slate-400 focus:border-[#57C1D8] transition-colors duration-300"
+                      placeholder="다루소프트"
+                    />
+                  </div>
+                   <div>
                     <label className="block text-[13px] font-semibold text-slate-700 mb-2">
                       연락처
                     </label>
@@ -110,8 +112,8 @@ export default function Contact() {
                       className="w-full px-0 py-3 border-0 border-b-2 border-slate-200 bg-transparent text-[15px] text-slate-900 placeholder:text-slate-400 focus:border-[#57C1D8] transition-colors duration-300"
                       placeholder="010-0000-0000"
                     />
-                  </div>
-                </div>
+                  </div> 
+                </div>*/}
                 <div>
                   <label className="block text-[13px] font-semibold text-slate-700 mb-2">
                     문의 내용 *
