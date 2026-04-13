@@ -93,7 +93,7 @@ export default function BusinessAreas() {
       id="business"
       className="py-28 lg:py-36 section-white overflow-hidden"
     >
-      <div className="flex justify-between max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className=" block lg:flex justify-between max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
         <AnimatedSection className="mb-16">
           <div>
             <span className="text-[15px] font-semibold tracking-[0.15em] uppercase text-[#57C1D8] mb-3 block">
@@ -121,20 +121,20 @@ export default function BusinessAreas() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="  [&:nth-child(2)_h4]:bg-[#cdf0d9]"
               >
-                <div className="grid grid-cols-[190px_1fr]  bg-white rounded-3xl p-12 border-[1px] border-slate-200 shadow-[0_15px_20px_0_rgba(0,0,0,0.05)]">
+                <div className="grid grid-cols-1 lg:grid-cols-[190px_1fr]  bg-white rounded-lg lg:rounded-3xl gap-3 lg:gap-0 p-6 lg:p-12 border-[1px] border-slate-200 shadow-[0_15px_20px_0_rgba(0,0,0,0.05)]">
                   <div>
                     <h3 className="text-2xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#009aea] to-[#00aa38]">
                       {section.label}
                     </h3>
                   </div>
                   <div>
-                    <div className="grid gap-2.5">
+                    <div className="grid gap-4 lg:gap-2.5">
                       {section.items.map((item, i) => (
                         <div
                           key={item.title}
-                          className="group flex gap-5 flex-col"
+                          className="group flex gap-8 lg:gap-5 flex-col"
                         >
-                          <div className="pt-1 grid grid-cols-[158px_1fr] gap-5">
+                          <div className="pt-1 grid grid-cols-1 lg:grid-cols-[158px_1fr] gap-1 lg:gap-5">
                             <h4 className="text-[18px] h-10 text-center content-center rounded-full font-semibold text-slate-800 group-hover:text-slate-900 transition-colors bg-[#d2ecf9]">
                               {item.title}
                             </h4>

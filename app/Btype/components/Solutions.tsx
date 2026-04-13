@@ -54,11 +54,11 @@ export default function Solutions() {
     >
       <div className="relative z-10 py-28 lg:py-36">
         <div className="max-w-screen-2xl mx-auto px-6 sm:px-8">
-          <AnimatedSection className="mb-20">
+          <AnimatedSection className=" mb-10 lg:mb-20">
             <span className="text-[13px] font-semibold tracking-[0.15em] uppercase text-white mb-3 block opacity-70">
               Solutions
             </span>
-            <div className="flex gap-10 items-end">
+            <div className="block lg:flex gap-10 items-end">
               <h2 className="text-[2rem] sm:text-[64px] font-bold text-white tracking-[-0.02em] leading-none">
                 솔루션
               </h2>
@@ -68,7 +68,7 @@ export default function Solutions() {
             </div>
           </AnimatedSection>
 
-          <div className="space-y-20 lg:space-y-28 grid grid-cols-3 gap-15">
+          <div className="space-y-10 lg:space-y-20 lg:space-y-28 grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-15">
             {SOLUTIONS.map((sol, idx) => (
               <AnimatedSection key={sol.name} delay={0.1}>
                 <div
@@ -79,7 +79,7 @@ export default function Solutions() {
                 >
                   <div
                     style={{ "--start-color": sol.color }}
-                    className="bg-[image:linear-gradient(to_bottom,var(--start-color)_55%,transparent_70%)] p-12 rounded-2xl "
+                    className="bg-[image:linear-gradient(to_bottom,var(--start-color)_65%,transparent_75%)] lg:bg-[image:linear-gradient(to_bottom,var(--start-color)_55%,transparent_70%)] p-6 lg:p-12 rounded-2xl "
                   >
                     <div>
                       <div className="inline-flex items-center gap-3 mb-6">

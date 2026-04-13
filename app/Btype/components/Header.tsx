@@ -22,7 +22,11 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.05)]" : "bg-transparent"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.05)]"
+          : "bg-transparent"
+      }`}
     >
       <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-between h-[80px]">
@@ -31,7 +35,7 @@ export default function Header() {
               <img
                 src="/logo1.svg"
                 alt="Darusoft Logo"
-                className={`h-auto w-[200px] object-contain`}
+                className="h-auto w-[160px] md:w-[200px] object-contain"
               />
             </div>
           </a>
@@ -57,11 +61,11 @@ export default function Header() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 -mr-2"
+            className="lg:hidden p-2 -mr-2 transition-colors text-slate-900"
             aria-label="메뉴"
           >
             <svg
-              className={`w-6 h-6 transition-colors`}
+              className="w-7 h-7"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -87,18 +91,31 @@ export default function Header() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100/50">
-          <nav className="max-w-7xl mx-auto px-6 py-3 space-y-0.5">
+        <div
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white/95 backdrop-blur-xl border-t border-slate-100/50 ${
+            isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <nav className="max-w-7xl mx-auto px-6 py-5 space-y-1">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-slate-700 hover:text-[#57C1D8] hover:bg-[#57C1D8]/5 rounded-xl text-[15px] font-medium transition-colors"
+                className="block px-4 py-3.5 text-slate-700 hover:text-[#57C1D8] hover:bg-[#57C1D8]/5 rounded-xl text-[18px] font-medium transition-colors"
               >
                 {item.label}
               </a>
             ))}
+            <div className="pt-4 px-4">
+              <a
+                href="#contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center justify-center w-full py-4 rounded-xl bg-[#0032a5] text-white font-bold text-[16px] shadow-lg shadow-[#0032a5]/20"
+              >
+                상담 문의하기
+              </a>
+            </div>
           </nav>
         </div>
       )}

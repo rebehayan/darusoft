@@ -82,10 +82,10 @@ export default function Company() {
   return (
     <section
       id="company"
-      className="py-28 lg:py-36 section-gray overflow-hidden  bg-stone-100"
+      className="py-20 lg:py-36 section-gray overflow-hidden  bg-stone-100"
     >
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
-        <AnimatedSection className="mb-20">
+        <AnimatedSection className="mb-10 lg:mb-20">
           <span className="text-[15px] font-semibold tracking-[0.15em] uppercase text-[#57C1D8] mb-3 block">
             About Us
           </span>
@@ -93,7 +93,7 @@ export default function Company() {
             회사소개
           </h2>
         </AnimatedSection>
-        <div className="flex gap-28">
+        <div className="lg:flex gap-28">
           <AnimatedSection className="mb-24">
             <div className="grid grid-cols-2 gap-2.5">
               {[
@@ -104,7 +104,7 @@ export default function Company() {
               ].map((s, i) => (
                 <div
                   key={s.label}
-                  className={`bg-white border-[1px] border-gray-200 p-8 lg:p-15 text-center ${CLOVER_RADIUS[s.idx]} shadow-[0_10px_15px_0_rgba(0,0,0,0.06)]`}
+                  className={`bg-white border-[1px] border-gray-200 p-3 lg:p-15 text-center ${CLOVER_RADIUS[s.idx]} shadow-[0_10px_15px_0_rgba(0,0,0,0.06)]`}
                 >
                   <div className="text-4xl sm:text-6xl font-bold text-[#0032a5] tracking-tight">
                     <Counter target={s.raw} suffix={s.suf} />
@@ -117,7 +117,7 @@ export default function Company() {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection className="flex gap-20">
+          <AnimatedSection className="lg:flex gap-20">
             <h3 className="text-3xl font-bold text-slate-900 mb-12 tracking-tight">
               연혁
             </h3>

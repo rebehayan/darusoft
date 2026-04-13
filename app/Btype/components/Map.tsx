@@ -13,8 +13,8 @@ export default function LocationMap() {
   return (
     <section id="map" className="py-20  bg-stone-100">
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
-        <AnimatedSection className="mb-20 flex justify-between items-end gap-2.5">
-          <div>
+        <AnimatedSection className="mb-10 lg:mb-20 lg:flex justify-between items-end gap-2.5">
+          <div className="mb-4 lg:mb-0">
             <span className="text-[15px] font-semibold tracking-[0.15em] uppercase text-[#57C1D8] mb-3 block">
               Location
             </span>
@@ -22,7 +22,7 @@ export default function LocationMap() {
               오시는 길
             </h2>
           </div>
-          <div className="text-2xl text-stone-700 flex items-center whitespace-nowrap">
+          <div className="text-lg lg:text-2xl text-stone-700 flex items-center whitespace-nowrap">
             <img src="/point.png" alt="" /> 서울시 강동구 성내로 5길 21 2F
           </div>
         </AnimatedSection>
