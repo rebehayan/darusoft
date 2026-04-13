@@ -53,10 +53,10 @@ export default function Header() {
           </nav>
 
           <a
-            href="#contact"
+            href="#map"
             className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full text-[16px] font-semibold tracking-wide transition-all duration-300 bg-gradient-to-r from-[#0032a5] to-[#0032a5] text-white hover:opacity-90 shadow-sm shadow-[#57C1D8]/20"
           >
-            상담 문의
+            찾아오시는 길
           </a>
 
           <button
@@ -109,11 +109,11 @@ export default function Header() {
             ))}
             <div className="pt-4 px-4">
               <a
-                href="#contact"
+                href="#map"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center justify-center w-full py-4 rounded-xl bg-[#0032a5] text-white font-bold text-[16px] shadow-lg shadow-[#0032a5]/20"
               >
-                상담 문의하기
+                찾아오시는 길
               </a>
             </div>
           </nav>

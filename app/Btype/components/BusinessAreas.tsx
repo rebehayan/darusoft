@@ -91,7 +91,7 @@ export default function BusinessAreas() {
   return (
     <section
       id="business"
-      className="py-28 lg:py-36 section-white overflow-hidden"
+      className="py-28 lg:py-36 section-white min-h-screen content-center  scroll-mt-20"
     >
       <div className=" block lg:flex justify-between max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
         <AnimatedSection className="mb-16">

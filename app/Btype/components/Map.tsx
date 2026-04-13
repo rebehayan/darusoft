@@ -11,7 +11,7 @@ export default function LocationMap() {
     "http://t1.daumcdn.net/roughmap/imgmap/33c80765ed63e97cac61374a083399a40b0e0ebb9a4519d81028635926f1f8b1";
 
   return (
-    <section id="map" className="py-20  bg-stone-100">
+    <section id="map" className="py-20  bg-stone-100 scroll-mt-20">
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
         <AnimatedSection className="mb-10 lg:mb-20 lg:flex justify-between items-end gap-2.5">
           <div className="mb-4 lg:mb-0">

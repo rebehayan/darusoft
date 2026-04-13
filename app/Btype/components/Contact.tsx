@@ -146,15 +146,6 @@ export default function Contact() {
                   >
                     문의 접수하기
                   </button>
-                  <span className="text-[13px] text-slate-400">
-                    또는{" "}
-                    <a
-                      href="mailto:CONTACT@darusoft.co.kr"
-                      className="text-[#57C1D8] hover:underline font-medium"
-                    >
-                      CONTACT@darusoft.co.kr
-                    </a>
-                  </span>
                 </div>
               </form>
             )}

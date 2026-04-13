@@ -50,7 +50,7 @@ export default function Solutions() {
   return (
     <section
       id="solutions"
-      className="relative overflow-hidden bg-gradient-to-r from-[#55b2c9] to-[#6ad7bb]"
+      className="relative  min-h-screen content-center bg-gradient-to-r from-[#55b2c9] to-[#6ad7bb] scroll-mt-20"
     >
       <div className="relative z-10 py-28 lg:py-36">
         <div className="max-w-screen-2xl mx-auto px-6 sm:px-8">
@@ -78,7 +78,9 @@ export default function Solutions() {
                   }}
                 >
                   <div
-                    style={{ "--start-color": sol.color } as React.CSSProperties}
+                    style={
+                      { "--start-color": sol.color } as React.CSSProperties
+                    }
                     className="bg-[image:linear-gradient(to_bottom,var(--start-color)_65%,transparent_75%)] lg:bg-[image:linear-gradient(to_bottom,var(--start-color)_55%,transparent_70%)] p-6 lg:p-12 rounded-2xl "
                   >
                     <div>

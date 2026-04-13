@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import AnimatedSection from "./AnimatedSection";
@@ -92,13 +92,35 @@ const TAG_COLORS: Record<string, string> = {
 export default function Portfolio() {
   const swiperRef = useRef<any>(null);
   const [isAutoplay, setIsAutoplay] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const updateOffset = () => {
+      const windowWidth = window.innerWidth;
+      const containerWidth = 1536;
+      const padding = 48;
+
+      if (windowWidth > containerWidth) {
+        setOffset((windowWidth - containerWidth) / 2 + padding);
+      } else {
+        setOffset(padding);
+      }
+    };
+
+    updateOffset();
+    window.addEventListener("resize", updateOffset);
+    return () => window.removeEventListener("resize", updateOffset);
+  }, []);
 
   const toggleAutoplay = () => {
     if (swiperRef.current?.swiper.autoplay) {
       if (isAutoplay) {
         swiperRef.current.swiper.autoplay.stop();
+        setIsPlaying(true);
       } else {
         swiperRef.current.swiper.autoplay.start();
+        setIsPlaying(false);
       }
       setIsAutoplay(!isAutoplay);
     }
@@ -118,7 +140,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="py-40 lg:py-45 section-white overflow-hidden bg-stone-100"
+      className={`py-40 lg:py-45 section-white bg-stone-100 ${isPlaying ? "overflow-visible" : "overflow-hidden"}`}
     >
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
         <AnimatedSection className="mb-4 lg:mb-16">
@@ -200,24 +222,26 @@ export default function Portfolio() {
           </div>
         </AnimatedSection>
       </div>
-      <div className="relative -mx-6 sm:-mx-8 lg:-mx-12 px-6 sm:px-8 lg:px-12">
+      <div className="w-full">
         <Swiper
           ref={swiperRef}
           modules={[Pagination, Autoplay]}
           slidesPerView="auto"
           spaceBetween={0}
+          slidesOffsetBefore={offset}
+          slidesOffsetAfter={48}
           breakpoints={{
             1024: {
               spaceBetween: 35,
             },
           }}
-          loop={true}
+          loop={false}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
+            stopOnLastSlide: false,
           }}
-          // pagination={{ clickable: true }}
-          className="w-[calc(100%+3rem)]"
+          className="w-full !overflow-visible"
         >
           {PROJECTS.map((p) => (
             <SwiperSlide
