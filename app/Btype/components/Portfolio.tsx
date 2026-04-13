@@ -111,8 +111,8 @@ export default function Portfolio() {
     fill: "none",
     stroke: "currentColor",
     strokeWidth: "2",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
   };
 
   return (
@@ -164,7 +164,7 @@ export default function Portfolio() {
                 className="w-12 h-12 cursor-pointer rounded-full border shadow-[3px_4px_7px_rgba(0,0,0,0.08)] bg-white border-slate-200 flex items-center justify-center hover:bg-[#57C1D8] hover:border-[#57C1D8] hover:text-white transition-all"
                 aria-label={isAutoplay ? "자동재생 정지" : "자동재생 재생"}
               >
-                <svg {...commonProps}>
+                <svg {...commonProps} aria-hidden="true">
                   {isAutoplay ? (
                     <>
                       <rect x="14" y="3" width="5" height="18" rx="1" />

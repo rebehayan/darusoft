@@ -78,7 +78,7 @@ export default function Solutions() {
                   }}
                 >
                   <div
-                    style={{ "--start-color": sol.color }}
+                    style={{ "--start-color": sol.color } as React.CSSProperties}
                     className="bg-[image:linear-gradient(to_bottom,var(--start-color)_65%,transparent_75%)] lg:bg-[image:linear-gradient(to_bottom,var(--start-color)_55%,transparent_70%)] p-6 lg:p-12 rounded-2xl "
                   >
                     <div>
