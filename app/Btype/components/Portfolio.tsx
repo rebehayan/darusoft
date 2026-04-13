@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import AnimatedSection from "./AnimatedSection";
 import Image from "next/image";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const PROJECTS = [
   {
@@ -87,9 +89,6 @@ const TAG_COLORS: Record<string, string> = {
   Application: "text-[#ea1ba3]",
 };
 
-import "swiper/css";
-import "swiper/css/pagination";
-
 export default function Portfolio() {
   const swiperRef = useRef<any>(null);
   const [isAutoplay, setIsAutoplay] = useState(true);
@@ -104,6 +103,17 @@ export default function Portfolio() {
       setIsAutoplay(!isAutoplay);
     }
   };
+  const commonProps = {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+  };
 
   return (
     <section
@@ -111,8 +121,8 @@ export default function Portfolio() {
       className="py-40 lg:py-45 section-white overflow-hidden bg-stone-100"
     >
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
-        <AnimatedSection className="mb-16">
-          <div className="flex justify-between items-end">
+        <AnimatedSection className="mb-4 lg:mb-16">
+          <div className="block lg:flex justify-between items-end">
             <div>
               <div>
                 <span className="text-[15px] font-semibold tracking-[0.15em] uppercase text-[#57C1D8] mb-3 block">
@@ -126,11 +136,11 @@ export default function Portfolio() {
                 공공기관과 기업을 위한 다양한 프로젝트를 수행해왔습니다
               </p>
             </div>
-            <div className="flex justify-center gap-4 mt-8">
+            <div className="flex lg:justify-center gap-2.5 mt-8">
               <button
                 type="button"
                 onClick={() => swiperRef.current?.swiper.slidePrev()}
-                className="w-12 h-12 cursor-pointer rounded-full border border-slate-200 flex items-center justify-center hover:bg-[#57C1D8] hover:border-[#57C1D8] hover:text-white transition-all"
+                className="w-12 h-12 cursor-pointer rounded-full border border-slate-200 shadow-[3px_4px_7px_rgba(0,0,0,0.08)] bg-white flex items-center justify-center hover:bg-[#57C1D8] hover:border-[#57C1D8] hover:text-white transition-all"
                 aria-label="이전 슬라이드"
               >
                 <svg
@@ -151,50 +161,24 @@ export default function Portfolio() {
               <button
                 type="button"
                 onClick={toggleAutoplay}
-                className="w-12 h-12 cursor-pointer rounded-full border border-slate-200 flex items-center justify-center hover:bg-[#57C1D8] hover:border-[#57C1D8] hover:text-white transition-all"
+                className="w-12 h-12 cursor-pointer rounded-full border shadow-[3px_4px_7px_rgba(0,0,0,0.08)] bg-white border-slate-200 flex items-center justify-center hover:bg-[#57C1D8] hover:border-[#57C1D8] hover:text-white transition-all"
                 aria-label={isAutoplay ? "자동재생 정지" : "자동재생 재생"}
               >
-                {isAutoplay ? (
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                )}
+                <svg {...commonProps}>
+                  {isAutoplay ? (
+                    <>
+                      <rect x="14" y="3" width="5" height="18" rx="1" />
+                      <rect x="5" y="3" width="5" height="18" rx="1" />
+                    </>
+                  ) : (
+                    <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
+                  )}
+                </svg>
               </button>
               <button
                 type="button"
                 onClick={() => swiperRef.current?.swiper.slideNext()}
-                className="w-12 h-12 cursor-pointer rounded-full border border-slate-200 flex items-center justify-center hover:bg-[#57C1D8] hover:border-[#57C1D8] hover:text-white transition-all"
+                className="w-12 h-12 cursor-pointer rounded-full border border-slate-200 flex items-center shadow-[3px_4px_7px_rgba(0,0,0,0.08)] bg-white justify-center hover:bg-[#57C1D8] hover:border-[#57C1D8] hover:text-white transition-all"
                 aria-label="다음 슬라이드"
               >
                 <svg
@@ -221,7 +205,12 @@ export default function Portfolio() {
           ref={swiperRef}
           modules={[Pagination, Autoplay]}
           slidesPerView="auto"
-          spaceBetween={35}
+          spaceBetween={0}
+          breakpoints={{
+            1024: {
+              spaceBetween: 35,
+            },
+          }}
           loop={true}
           autoplay={{
             delay: 3000,
@@ -231,24 +220,33 @@ export default function Portfolio() {
           className="w-[calc(100%+3rem)]"
         >
           {PROJECTS.map((p) => (
-            <SwiperSlide key={p.id} className="!w-[300px] lg:!w-[380px] pb-2">
-              <div className="w-full aspect-[4/5] overflow-hidden p-8 border border-solid border-[#E5E5E5] shadow-[3px_4px_7px_rgba(0,0,0,0.08)] rounded-3xl group cursor-pointer transition-all duration-300">
-                <div className=" text-black">
+            <SwiperSlide
+              key={p.id}
+              className="!w-[300px] lg:!w-[380px] pb-2 pl-5 lg:pl-0"
+            >
+              <div className="w-full aspect-[4/5] overflow-hidden p-6 sm:p-8 border border-solid border-[#E5E5E5] shadow-[3px_4px_7px_rgba(0,0,0,0.08)] rounded-2xl sm:rounded-3xl group cursor-pointer transition-all duration-300 bg-white">
+                <div className="text-black">
                   <span
-                    className={`text-[15px] font-bold tracking-widest opacity-70 mb-2 block underline underline-offset-4 ${TAG_COLORS[p.tag] || ""}`}
+                    className={`text-[13px] sm:text-[15px] font-bold tracking-widest opacity-70 mb-1 sm:mb-2 block underline underline-offset-4 ${TAG_COLORS[p.tag] || ""}`}
                   >
                     {p.tag}
                   </span>
-                  <div className="h-[215px] flex justify-center items-center border-b-[1] border-gray-200">
-                    <img src={p.img} alt={p.name} className="w-52" />
+
+                  <div className="h-[160px] sm:h-[215px] flex justify-center items-center border-b-[1px] border-gray-200">
+                    <img
+                      src={p.img}
+                      alt={p.name}
+                      className="w-40 sm:w-52 transition-transform duration-300 group-hover:scale-105"
+                    />
                   </div>
-                  <h4 className="pt-10 pb-6 text-2xl font-bold text-gray-900">
+
+                  <h4 className="pt-6 sm:pt-10 pb-3 sm:pb-6 text-xl sm:text-2xl font-bold text-gray-900 line-clamp-1">
                     {p.name}
                   </h4>
-                  <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+
+                  <p className="mt-1 sm:mt-2 text-[13px] sm:text-sm text-gray-600 leading-relaxed line-clamp-2">
                     {p.desc}
                   </p>
-                  {/* <p className="mt-1 text-xs text-black/40">{p.scope}</p> */}
                 </div>
               </div>
             </SwiperSlide>
