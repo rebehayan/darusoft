@@ -11,15 +11,20 @@ export default function LocationMap() {
     "http://t1.daumcdn.net/roughmap/imgmap/33c80765ed63e97cac61374a083399a40b0e0ebb9a4519d81028635926f1f8b1";
 
   return (
-    <section id="map" className="py-20 bg-slate-50">
+    <section id="map" className="py-20  bg-stone-100">
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
-        <AnimatedSection className="mb-12">
-          <span className="text-[13px] font-semibold tracking-[0.15em] uppercase text-[#57C1D8] mb-3 block">
-            Location
-          </span>
-          <h2 className="text-[2rem] sm:text-[2.5rem] font-bold text-slate-900 tracking-[-0.02em] leading-tight">
-            오시는 길
-          </h2>
+        <AnimatedSection className="mb-20 flex justify-between items-end gap-2.5">
+          <div>
+            <span className="text-[15px] font-semibold tracking-[0.15em] uppercase text-[#57C1D8] mb-3 block">
+              Location
+            </span>
+            <h2 className="text-[2rem] sm:text-[64px] font-bold text-slate-900 tracking-[-0.02em] leading-none">
+              오시는 길
+            </h2>
+          </div>
+          <div className="text-2xl text-stone-700 flex items-center whitespace-nowrap">
+            <img src="/point.png" alt="" /> 서울시 강동구 성내로 5길 21 2F
+          </div>
         </AnimatedSection>
 
         <div className="w-full font-sans  border border-slate-200 rounded-xl overflow-hidden group">

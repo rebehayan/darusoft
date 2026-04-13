@@ -24,14 +24,14 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.05)]" : "bg-transparent"}`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-between h-[80px]">
           <a href="#hero" className="flex items-center gap-2.5 shrink-0">
             <div className="relative h-8 md:h-10 w-auto">
               <img
                 src="/logo1.svg"
                 alt="Darusoft Logo"
-                className={`h-full w-auto object-contain`}
+                className={`h-auto w-[200px] object-contain`}
               />
             </div>
           </a>
@@ -41,7 +41,7 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="px-4 py-2 rounded-lg text-[14px] font-medium transition-all duration-300 text-slate-600 hover:text-[#57C1D8] hover:bg-[#57C1D8]/5"
+                className="px-7 py-2 rounded-lg text-[22px] font-medium transition-all duration-300 text-slate-900 hover:text-[#57C1D8] hover:bg-[#57C1D8]/5"
               >
                 {item.label}
               </a>
@@ -50,7 +50,7 @@ export default function Header() {
 
           <a
             href="#contact"
-            className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full text-[13px] font-semibold tracking-wide transition-all duration-300 bg-gradient-to-r from-[#57C1D8] to-[#77B263] text-white hover:opacity-90 shadow-sm shadow-[#57C1D8]/20"
+            className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full text-[16px] font-semibold tracking-wide transition-all duration-300 bg-gradient-to-r from-[#0032a5] to-[#0032a5] text-white hover:opacity-90 shadow-sm shadow-[#57C1D8]/20"
           >
             상담 문의
           </a>

@@ -12,7 +12,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="overflow-hidden">
+    <section id="contact" className="overflow-hidden  bg-stone-100">
       {/* CTA Band with BG image */}
       <div className="relative py-20 lg:py-24">
         <Image

@@ -58,14 +58,14 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-black0" />
 
-      <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12 pt-[80px]">
+      <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-6 sm:px-8 pt-[80px]">
         <div className="py-20 lg:py-28 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-16">
           <div className="lg:max-w-2xl">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-block text-[13px] font-semibold tracking-[0.2em] uppercase text-[#77B263] mb-6"
+              className="inline-block text-[15px] font-semibold tracking-[0.2em] uppercase text-[#009aea] mb-6"
             >
               Digital Innovation Partner
             </motion.span>
@@ -73,11 +73,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.1 }}
-              className="text-[2.5rem] sm:text-[3.25rem] lg:text-[4rem] font-bold text-gray-800 leading-[1.1] tracking-[-0.03em]"
+              className="text-[2.5rem] sm:text-[3.25rem] lg:text-[5rem] font-bold text-gray-800 leading-[1.1] tracking-[-0.03em]"
             >
               신뢰를 설계하고,
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#57C1D8] to-[#77B263]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#009aea] to-[#00aa38]">
                 혁신을 연결합니다
               </span>
             </motion.h1>
@@ -85,7 +85,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.25 }}
-              className="mt-7 max-w-lg text-[16px] sm:text-[17px] text-gray-600 leading-[1.8] font-light"
+              className="mt-7 max-w-lg text-[16px] sm:text-[18px] text-gray-600 leading-[1.8] font-light"
             >
               공공·기관과 의료 분야의 디지털 인프라를 구축하고,
               <br className="hidden sm:block" />
@@ -99,10 +99,10 @@ export default function Hero() {
             >
               <a
                 href="#business"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 rounded-full font-semibold text-[14px] tracking-wide hover:bg-gray-50 transition-all duration-300"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 rounded-full font-semibold text-[17px] tracking-wide hover:bg-gray-50 transition-all duration-300 shadow-[0_15px_20px_0_rgba(0,0,0,0.05)]"
               >
                 서비스 알아보기
-                <span className="w-5 h-5 rounded-full bg-gradient-to-r from-[#57C1D8] to-[#77B263] text-white flex items-center justify-center">
+                <span className="w-5 h-5 rounded-full bg-gradient-to-r from-[#57C1D8] to-[#77B263] text-white flex items-center justify-center shadow-[0_15px_20px_0_rgba(0,0,0,0.05)]">
                   <svg
                     className="w-3 h-3"
                     fill="none"
@@ -120,7 +120,7 @@ export default function Hero() {
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center px-8 py-4 border border-white/20 text-white rounded-full bg-gray-800 font-medium text-[14px] tracking-wide hover:bg-gray-700 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-white/20 text-white rounded-full bg-gray-800 font-medium text-[17px] tracking-wide hover:bg-gray-700 transition-all duration-300"
               >
                 문의하기
               </a>
@@ -131,14 +131,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.55 }}
-            className="flex gap-8 lg:gap-12 lg:pb-2"
+            className="flex lg:pb-2 divide-x divide-slate-300"
           >
             {METRICS.map((m, i) => (
-              <div key={i} className="text-center lg:text-right">
-                <div className="text-3xl sm:text-4xl font-bold text-gray-800 tracking-tight">
+              <div key={i} className="text-center lg:text-right px-9">
+                <div className="text-5xl sm:text-5xl font-bold text-gray-800 tracking-tight">
                   <Counter target={m.value} suffix={m.suffix} />
                 </div>
-                <div className="mt-1 text-[16px] text-gray-500 font-medium tracking-wider uppercase">
+                <div className="mt-1 text-[18px] text-gray-500 font-medium tracking-wider uppercase">
                   {m.label}
                 </div>
               </div>
