@@ -91,9 +91,9 @@ export default function BusinessAreas() {
   return (
     <section
       id="business"
-      className="py-26 lg:py-30 section-white min-h-screen content-center"
+      className="py-25 lg:py-38 section-white min-h-screen"
     >
-      <div className=" block lg:flex justify-between max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className=" block lg:flex justify-between max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-3">
         <AnimatedSection className="mb-16">
           <div>
             <span className="text-[15px] font-semibold tracking-[0.15em] uppercase text-[#57C1D8] mb-3 block">

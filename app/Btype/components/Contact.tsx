@@ -12,7 +12,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="overflow-hidden  bg-stone-100">
+    <section
+      id="contact"
+      className="py-25 lg:py-38 overflow-hidden  bg-stone-100"
+    >
       {/* CTA Band with BG image */}
       <div className="relative py-20 lg:py-24">
         <Image
@@ -28,7 +31,7 @@ export default function Contact() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-[-0.02em]">
               프로젝트를 함께 시작하세요
             </h2>
-            <p className="mt-4 text-[17px] text-white/70 font-light mx-auto">
+            <p className="mt-4 text-[17px] text-white/90 font-light mx-auto">
               자세한 문의사항 및 자료요청은 아래 양식을 이용해주세요. 빠른 시간
               내에 답변 드리겠습니다.
             </p>

@@ -82,9 +82,9 @@ export default function Company() {
   return (
     <section
       id="company"
-      className="py-20 lg:py-36 section-gray overflow-hidden  bg-stone-100"
+      className="py-25 lg:py-38 section-gray box-border overflow-hidden  bg-stone-100"
     >
-      <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-3">
         <AnimatedSection className="mb-10 lg:mb-20">
           <span className="text-[15px] font-semibold tracking-[0.15em] uppercase text-[#57C1D8] mb-3 block">
             About Us

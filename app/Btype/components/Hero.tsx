@@ -58,7 +58,7 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-black0" />
 
-      <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-6 sm:px-8 pt-[80px]">
+      <div className="relative z-10 w-full max-w-screen-2xl mx-auto  px-6 sm:px-8 lg:px-3 pt-[80px]">
         <div className="py-20 lg:py-28 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-16">
           <div className="lg:max-w-2xl">
             <motion.span

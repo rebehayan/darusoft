@@ -28,7 +28,7 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-3">
         <div className="flex items-center justify-between h-[80px]">
           <a href="#hero" className="flex items-center gap-2.5 shrink-0">
             <div className="relative h-8 md:h-10 w-auto">

@@ -13,7 +13,7 @@ const PROJECTS = [
     id: 1,
     name: "대한임상병리사협회",
     scope: "홈페이지 유지관리",
-    desc: "보수교육 및 출결시스템 기반 운영관리",
+    desc: "보수교육 및 출결시스템을 기반으로 대한임상병리사협회 홈페이지 운영관리",
     tag: "Website",
     img: "/logo-1.png",
   },
@@ -21,7 +21,7 @@ const PROJECTS = [
     id: 2,
     name: "한국생명존중희망재단",
     scope: "통합 홈페이지 기능 개발 및 유지관리",
-    desc: "재단 홈페이지 기능 개발 및 운영관리",
+    desc: "한국생명존중희망재단 홈페이지 기능 개발 및  운영관리",
     tag: "Website",
     img: "/logo-2.png",
   },
@@ -29,7 +29,7 @@ const PROJECTS = [
     id: 3,
     name: "가평군시설관리공단",
     scope: "홈페이지 구축 및 유지관리",
-    desc: "공단 홈페이지 구축 및 운영관리",
+    desc: "가평군시설관리공단 홈페이지 구축 및 운영관리",
     tag: "Website",
     img: "/logo-3.png",
   },
@@ -37,7 +37,7 @@ const PROJECTS = [
     id: 4,
     name: "한국문화관광연구원",
     scope: "대표 누리집 기능 개선 및 운영",
-    desc: "대표 누리집 기능개선 및 운영관리",
+    desc: "한국문화관광연구원 대표 누리집 기능개선 및 운영관리",
     tag: "Website",
     img: "/logo-4.png",
   },
@@ -45,7 +45,7 @@ const PROJECTS = [
     id: 5,
     name: "공수처",
     scope: "대표홈페이지 구축 및 유지관리",
-    desc: "국문/영문 홈페이지 구축 및 운영관리",
+    desc: "공수처 국문/영문 홈페이지 구축 및 운영관리",
     tag: "Website",
     img: "/logo-5.png",
   },
@@ -53,7 +53,7 @@ const PROJECTS = [
     id: 6,
     name: "명지전문대학",
     scope: "홈페이지 유지관리",
-    desc: "홈페이지 운영관리",
+    desc: "명지전문대학 홈페이지 운영관리",
     tag: "Website",
     img: "/logo-6.jpg",
   },
@@ -61,7 +61,7 @@ const PROJECTS = [
     id: 7,
     name: "금융규제민원포털",
     scope: "대표홈페이지 구축 및 유지관리",
-    desc: "홈페이지 구축 및 운영관리",
+    desc: "금융규제민원포털 홈페이지 구축 및 운영관리",
     tag: "Website",
     img: "/logo-7.png",
   },
@@ -69,7 +69,7 @@ const PROJECTS = [
     id: 8,
     name: "한국노인인력개발원",
     scope: "대표 홈페이지 유지관리",
-    desc: "대표 홈페이지 운영관리",
+    desc: "한국노인인력개발원 대표 홈페이지 운영관리",
     tag: "Website",
     img: "/logo-8.jpg",
   },
@@ -77,7 +77,7 @@ const PROJECTS = [
     id: 9,
     name: "K-오션MOOC",
     scope: "홈페이지 구축 및 운영관리",
-    desc: "한국형 온라인 해양공개강좌 홈페이지 구축 및 운영관리",
+    desc: "K-오션MOOC(한국형 온라인  해양공개강좌 ) 홈페이지 구축 및 운영관리",
     tag: "Website",
     img: "/logo-9.png",
   },
@@ -140,7 +140,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className={`py-26 lg:py-30 box-border min-h-screen content-center section-white bg-stone-100 ${isPlaying ? "overflow-visible" : "overflow-hidden"}`}
+      className={`py-25 lg:py-38 box-border min-h-screen section-white bg-stone-100 ${isPlaying ? "overflow-visible" : "overflow-hidden"}`}
     >
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-3">
         <AnimatedSection className="mb-4 lg:mb-16">
@@ -265,11 +265,11 @@ export default function Portfolio() {
                     />
                   </div>
 
-                  <h4 className="pt-6 sm:pt-10 pb-3 sm:pb-6 text-xl sm:text-2xl font-bold text-gray-900 line-clamp-1">
+                  <h4 className="pt-5 sm:pt-8 pb-2 sm:pb-4 text-xl sm:text-2xl font-bold text-gray-900 line-clamp-1 break-keep">
                     {p.name}
                   </h4>
 
-                  <p className="mt-1 sm:mt-2 text-[13px] sm:text-sm text-gray-600 leading-relaxed line-clamp-2">
+                  <p className="text-[13px] sm:text-sm text-gray-600 leading-5  break-keep">
                     {p.desc}
                   </p>
                 </div>
