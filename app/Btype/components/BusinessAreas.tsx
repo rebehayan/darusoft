@@ -109,7 +109,7 @@ export default function BusinessAreas() {
           </div>
         </AnimatedSection>
 
-        <div className="grid gap-7">
+        <div className="grid gap-6">
           {SECTIONS.map((section, idx) => {
             const c = COLOR[section.color];
             return (
@@ -121,7 +121,7 @@ export default function BusinessAreas() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="  [&:nth-child(2)_h4]:bg-[#cdf0d9]"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-[190px_1fr]  bg-white rounded-lg lg:rounded-3xl gap-3 lg:gap-0 p-6 lg:p-7 border-[1px] border-slate-200 shadow-[0_15px_20px_0_rgba(0,0,0,0.05)]">
+                <div className="grid grid-cols-1 lg:grid-cols-[180px_1fr] bg-white rounded-md lg:rounded-2xl gap-3 lg:gap-0 p-6 lg:p-7 border-[1px] border-slate-200 shadow-[0_15px_20px_0_rgba(0,0,0,0.05)]">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#009aea] to-[#00aa38]">
                       {section.label}
@@ -132,10 +132,10 @@ export default function BusinessAreas() {
                       {section.items.map((item, i) => (
                         <div
                           key={item.title}
-                          className="group flex gap-8 lg:gap-5 flex-col"
+                          className="group flex gap-8 lg:gap-4 flex-col"
                         >
-                          <div className="pt-1 grid grid-cols-1 lg:grid-cols-[158px_1fr] gap-1 lg:gap-5">
-                            <h4 className="text-[15px] h-9 text-center content-center rounded-full font-semibold text-slate-800 group-hover:text-slate-900 transition-colors bg-[#d2ecf9]">
+                          <div className="pt-1 grid grid-cols-1 lg:grid-cols-[150px_1fr] gap-1 lg:gap-5">
+                            <h4 className="text-[14px] h-8 text-center content-center rounded-full font-semibold text-slate-800 group-hover:text-slate-900 transition-colors bg-[#d2ecf9]">
                               {item.title}
                             </h4>
                             <p className="mt-1.5 text-[15px] text-slate-700 leading-relaxed">
