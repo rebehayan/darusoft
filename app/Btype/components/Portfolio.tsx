@@ -245,7 +245,7 @@ export default function Portfolio() {
             disableOnInteraction: false,
             stopOnLastSlide: false,
           }}
-          className="px-3 overflow-visible"
+          className="!px-3 !overflow-visible"
         >
           {PROJECTS.map((p) => (
             <SwiperSlide key={p.id} className="pb-2 pl-0">
