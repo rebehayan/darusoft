@@ -93,7 +93,7 @@ export default function Company() {
             회사소개
           </h2>
         </AnimatedSection>
-        <div className="lg:flex gap-28">
+        <div className="lg:grid lg:grid-cols-[1fr_1.5fr] gap-28">
           <AnimatedSection className="mb-24">
             <div className="grid grid-cols-2 gap-2.5">
               {[
