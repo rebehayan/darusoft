@@ -8,8 +8,14 @@ const NAV_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-400">
-      <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
+    <footer className="border-t-[1px] border-stone-300 py-10 text-center">
+      <p className="text-[14px] lg:text-[16px] text-stone-500">
+        서울시 강동구 성내로 5길 21, 201
+        <br />
+        COPYRIGHT &copy; {new Date().getFullYear()} darusoft. All RIGHTS
+        RESERVED.
+      </p>
+      <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12 hidden">
         <div className="py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2.5">

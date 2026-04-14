@@ -139,7 +139,7 @@ export default function Contact() {
                     개인정보 수집 및 이용에 동의합니다.
                   </label>
                 </div>
-                <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+                <div className="text-center sm:flex-row items-center gap-4 pt-4">
                   <button
                     type="submit"
                     className="w-full sm:w-auto px-12 py-4 bg-gradient-to-r from-[#57C1D8] to-[#77B263] text-white rounded-full font-semibold text-[15px] hover:opacity-90 transition-all duration-300"

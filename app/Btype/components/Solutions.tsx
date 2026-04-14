@@ -50,11 +50,11 @@ export default function Solutions() {
   return (
     <section
       id="solutions"
-      className="relative  min-h-screen content-center bg-gradient-to-r from-[#55b2c9] to-[#6ad7bb] scroll-mt-20"
+      className="relative  min-h-screen content-center bg-gradient-to-r from-[#55b2c9] to-[#6ad7bb] scroll-mt-12"
     >
-      <div className="relative z-10 py-28 lg:py-36">
+      <div className="relative z-10 py-28 lg:py-30">
         <div className="max-w-screen-2xl mx-auto px-6 sm:px-8">
-          <AnimatedSection className=" mb-10 lg:mb-20">
+          <AnimatedSection className=" mb-10 lg:mb-15">
             <span className="text-[13px] font-semibold tracking-[0.15em] uppercase text-white mb-3 block opacity-70">
               Solutions
             </span>
@@ -81,7 +81,7 @@ export default function Solutions() {
                     style={
                       { "--start-color": sol.color } as React.CSSProperties
                     }
-                    className="bg-[image:linear-gradient(to_bottom,var(--start-color)_65%,transparent_75%)] lg:bg-[image:linear-gradient(to_bottom,var(--start-color)_55%,transparent_70%)] p-6 lg:p-12 rounded-2xl "
+                    className="bg-[image:linear-gradient(to_bottom,var(--start-color)_65%,transparent_75%)] lg:bg-[image:linear-gradient(to_bottom,var(--start-color)_55%,transparent_70%)] p-6 lg:p-10 rounded-2xl "
                   >
                     <div>
                       <div className="inline-flex items-center gap-3 mb-6">
@@ -136,7 +136,7 @@ export default function Solutions() {
                           stiffness: 200,
                           damping: 20,
                         }}
-                        className="relative aspect-[4/3] rounded-2xl"
+                        className="relative aspect-[6/3] rounded-2xl"
                       ></motion.div>
                     </div>
                   </div>

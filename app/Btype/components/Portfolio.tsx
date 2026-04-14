@@ -140,9 +140,9 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className={`py-40 lg:py-45 section-white bg-stone-100 ${isPlaying ? "overflow-visible" : "overflow-hidden"}`}
+      className={`py-20 lg:py-45 section-white bg-stone-100 ${isPlaying ? "overflow-visible" : "overflow-hidden"}`}
     >
-      <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-3">
         <AnimatedSection className="mb-4 lg:mb-16">
           <div className="block lg:flex justify-between items-end">
             <div>
@@ -222,32 +222,33 @@ export default function Portfolio() {
           </div>
         </AnimatedSection>
       </div>
-      <div className="w-full">
+      <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-0 overflow-hidden">
         <Swiper
           ref={swiperRef}
           modules={[Pagination, Autoplay]}
-          slidesPerView="auto"
-          spaceBetween={0}
-          slidesOffsetBefore={offset}
-          slidesOffsetAfter={48}
+          slidesPerView={1}
+          spaceBetween={20}
           breakpoints={{
+            720: {
+              slidesPerView: 2,
+              spaceBetween: 35,
+            },
+
             1024: {
+              slidesPerView: 4,
               spaceBetween: 35,
             },
           }}
-          loop={false}
+          loop={true}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
             stopOnLastSlide: false,
           }}
-          className="w-full !overflow-visible"
+          className="px-3 overflow-visible"
         >
           {PROJECTS.map((p) => (
-            <SwiperSlide
-              key={p.id}
-              className="!w-[300px] lg:!w-[380px] pb-2 pl-5 lg:pl-0"
-            >
+            <SwiperSlide key={p.id} className="pb-2 pl-0">
               <div className="w-full aspect-[4/5] overflow-hidden p-6 sm:p-8 border border-solid border-[#E5E5E5] shadow-[3px_4px_7px_rgba(0,0,0,0.08)] rounded-2xl sm:rounded-3xl group cursor-pointer transition-all duration-300 bg-white">
                 <div className="text-black">
                   <span

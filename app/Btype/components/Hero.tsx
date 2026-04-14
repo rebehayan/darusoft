@@ -131,14 +131,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.55 }}
-            className="flex lg:pb-2 divide-x divide-slate-300"
+            className="flex lg:pb-2 justify-center lg:justify-normal divide-x divide-slate-300"
           >
             {METRICS.map((m, i) => (
-              <div key={i} className="text-center lg:text-right px-9">
-                <div className="text-5xl sm:text-5xl font-bold text-gray-800 tracking-tight">
+              <div key={i} className="text-center lg:text-right px-4 lg:px-9">
+                <div className="text-3xl sm:text-5xl font-bold text-gray-800 tracking-tight">
                   <Counter target={m.value} suffix={m.suffix} />
                 </div>
-                <div className="mt-1 text-[18px] text-gray-500 font-medium tracking-wider uppercase">
+                <div className="mt-1 text-xs lg:text-[18px] text-gray-500 font-medium tracking-wider uppercase">
                   {m.label}
                 </div>
               </div>
