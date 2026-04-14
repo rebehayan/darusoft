@@ -68,7 +68,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[13px] font-semibold text-slate-700 mb-2">
+                    <label className="block text-[15px] font-semibold text-slate-700 mb-2">
                       이름 / 담당자명 *
                     </label>
                     <input
@@ -80,7 +80,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-[13px] font-semibold text-slate-700 mb-2">
+                    <label className="block text-[15px] font-semibold text-slate-700 mb-2">
                       이메일 *
                     </label>
                     <input
@@ -115,7 +115,7 @@ export default function Contact() {
                   </div> 
                 </div>*/}
                 <div>
-                  <label className="block text-[13px] font-semibold text-slate-700 mb-2">
+                  <label className="block text-[15px] font-semibold text-slate-700 mb-2">
                     문의 내용 *
                   </label>
                   <textarea
@@ -134,7 +134,7 @@ export default function Contact() {
                   />
                   <label
                     htmlFor="privacy"
-                    className="text-[13px] text-slate-500"
+                    className="text-[15px] text-slate-500"
                   >
                     개인정보 수집 및 이용에 동의합니다.
                   </label>

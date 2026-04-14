@@ -14,7 +14,7 @@ const PROJECTS = [
     name: "대한임상병리사협회",
     scope: "홈페이지 유지관리",
     desc: "보수교육 및 출결시스템 기반 운영관리",
-    tag: "Solution",
+    tag: "Website",
     img: "/logo-1.png",
   },
   {
@@ -62,7 +62,7 @@ const PROJECTS = [
     name: "금융규제민원포털",
     scope: "대표홈페이지 구축 및 유지관리",
     desc: "홈페이지 구축 및 운영관리",
-    tag: "Solution",
+    tag: "Website",
     img: "/logo-7.png",
   },
   {
@@ -78,7 +78,7 @@ const PROJECTS = [
     name: "K-오션MOOC",
     scope: "홈페이지 구축 및 운영관리",
     desc: "한국형 온라인 해양공개강좌 홈페이지 구축 및 운영관리",
-    tag: "Application",
+    tag: "Website",
     img: "/logo-9.png",
   },
 ];
@@ -140,7 +140,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className={`py-20 lg:py-45 section-white bg-stone-100 ${isPlaying ? "overflow-visible" : "overflow-hidden"}`}
+      className={`py-26 lg:py-30 box-border min-h-screen content-center section-white bg-stone-100 ${isPlaying ? "overflow-visible" : "overflow-hidden"}`}
     >
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-3">
         <AnimatedSection className="mb-4 lg:mb-16">

@@ -50,9 +50,9 @@ export default function Solutions() {
   return (
     <section
       id="solutions"
-      className="relative  min-h-screen content-center bg-gradient-to-r from-[#55b2c9] to-[#6ad7bb] scroll-mt-12"
+      className="py-26 lg:py-30 relative box-border min-h-screen content-center bg-gradient-to-r from-[#55b2c9] to-[#6ad7bb]"
     >
-      <div className="relative z-10 py-28 lg:py-30">
+      <div className="relative z-10">
         <div className="max-w-screen-2xl mx-auto px-6 sm:px-8">
           <AnimatedSection className=" mb-10 lg:mb-15">
             <span className="text-[13px] font-semibold tracking-[0.15em] uppercase text-white mb-3 block opacity-70">
