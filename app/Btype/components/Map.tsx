@@ -10,6 +10,23 @@ export default function LocationMap() {
   const mapImgSrc =
     "http://t1.daumcdn.net/roughmap/imgmap/33c80765ed63e97cac61374a083399a40b0e0ebb9a4519d81028635926f1f8b1";
 
+  const PhoneSvg = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      color="#00a660"
+    >
+      <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+    </svg>
+  );
+
   return (
     <section id="map" className="py-25 lg:py-38 bg-stone-100">
       <div className="max-w-screen-2xl mx-auto px-6 sm:px-8 lg:px-3">
@@ -22,8 +39,13 @@ export default function LocationMap() {
               오시는 길
             </h2>
           </div>
-          <div className="text-lg lg:text-2xl text-stone-700 flex items-center whitespace-nowrap gap-2">
-            <img src="/point.png" alt="" /> 서울시 강동구 성내로 5길 21 2F
+          <div className="text-lg lg:text-2xl text-stone-700 grid whitespace-nowrap gap-2">
+            <div className="flex items-center  gap-2">
+              {PhoneSvg} 02-409-8831
+            </div>
+            <div className="flex items-center  gap-2">
+              <img src="/point.png" alt="" /> 서울시 강동구 성내로 5길 21 2F
+            </div>
           </div>
         </AnimatedSection>
 
